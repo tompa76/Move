@@ -10,6 +10,7 @@
       'ngResource',
       'ui.router',
       'ui.bootstrap',
+      'pascalprecht.translate',
       'toastr',
 
       //Models

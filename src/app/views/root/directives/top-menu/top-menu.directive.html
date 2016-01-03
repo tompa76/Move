@@ -15,19 +15,28 @@
       <a class="navbar-brand" ui-sref="root.home()">Move</a>
     </div>
 
-    <div id="navbar" class="navbar-collapse" collapse="topMenuController.navCollapsed">
+    <div id="navbar" class="navbar-collapse" uib-collapse="topMenuController.navCollapsed">
       <ul class="nav navbar-nav">
         <li ng-class="{'active': topMenuController.state.current.name == 'root.home'}">
-          <a ng-click="topMenuController.navCollapsed = true" ui-sref="root.home()">Hem</a>
+          <a ng-click="topMenuController.navCollapsed = true" ui-sref="root.home()" translate="NAVBAR.HOME"></a>
         </li>
         <li ng-class="{'active': topMenuController.state.current.name == 'root.about'}">
-          <a ng-click="topMenuController.navCollapsed = true" ui-sref="root.about()">Om</a>
+          <a ng-click="topMenuController.navCollapsed = true" ui-sref="root.about()" translate="NAVBAR.ABOUT"></a>
         </li>
         <li ng-class="{'active': topMenuController.state.current.name == 'root.contacts'}">
-          <a ng-click="topMenuController.navCollapsed = true" ui-sref="root.contacts()">Kontakter</a>
+          <a ng-click="topMenuController.navCollapsed = true" ui-sref="root.contacts()" translate="NAVBAR.CONTACTS"></a>
         </li>
-      </ul>
-    </div>
 
+        <li uib-dropdown>
+          <a href uib-dropdown-toggle aria-haspopup="true" aria-expanded="false">{{'NAVBAR.LANGUAGE' | translate}} <span class="caret"></span></a>
+          <ul class="uib-dropdown-menu">
+            <li><a href="#" ng-click="topMenuController.selectedLanguage('sv_SE')" translate="NAVBAR.SWEDISH"></a></li>
+            <li><a href="#" ng-click="topMenuController.selectedLanguage('en_EN')" translate="NAVBAR.ENGLISH"></a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+    </div>
   </div>
 </nav>

@@ -6,9 +6,18 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider) {
+  function config($logProvider, $translateProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
+
+    $translateProvider.useStaticFilesLoader({
+      prefix: 'assets/localization/',
+      suffix: '.json'
+    });
+
+    $translateProvider.useSanitizeValueStrategy('escaped');
+    $translateProvider.preferredLanguage('sv_SE');
+    $translateProvider.fallbackLanguage('sv_SE');
   }
 
 })();

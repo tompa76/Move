@@ -18,10 +18,15 @@
     };
 
     /** @ngInject */
-    function TopMenuController($state) {
+    function TopMenuController($state, $translate) {
       var vm = this;
       vm.state = $state;
       vm.navCollapsed = true;
+      vm.selectedLanguage = selectedLanguage;
+
+      function selectedLanguage(language) {
+        $translate.use(language);
+      }
     }
   }
 
