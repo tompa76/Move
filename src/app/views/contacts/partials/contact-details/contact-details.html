@@ -1,0 +1,69 @@
+<section id="contact-details" class="container">
+<p>Contact Details</p>
+
+<form name="contactDetailsController.contactForm" novalidate>
+
+  <div class="form-group"
+        ng-class="{'has-error': contactDetailsController.hasErrors(contactDetailsController.contactForm.name.$error)}">
+    <label class="control-label" for="name">Förnamn</label>
+    <input type="text"
+           class="form-control"
+           id="name"
+           name="name"
+           ng-model="contactDetailsController.contact.name"
+           ng-required="true"
+           placeholder="Ange ditt förnamn">
+    <span class="help-block"
+          ng-show="contactDetailsController.contactForm.name.$error.required">Du måste ange ett förnamn</span>
+  </div>
+
+  <div class="form-group"
+       ng-class="{'has-error': contactDetailsController.hasErrors(contactDetailsController.contactForm.surname.$error)}">
+    <label class="control-label" for="surname">Efternamn</label>
+    <input type="text"
+           class="form-control"
+           id="surname"
+           name="surname"
+           ng-model="contactDetailsController.contact.surname"
+           ng-required="true"
+           placeholder="Ange ditt efternamn">
+    <span class="help-block"
+          ng-show="contactDetailsController.contactForm.surname.$error.required">Du måste ange ett efternamn</span>
+  </div>
+
+  <div class="form-group">
+    <label for="tel_mobile">Telefon</label>
+    <input type="text"
+           class="form-control"
+           id="tel_mobile"
+           ng-model="contactDetailsController.contact.tel_mobile"
+           placeholder="Ange ditt mobilnummer">
+  </div>
+
+  <div class="form-group"
+       ng-class="{'has-error': contactDetailsController.hasErrors(contactDetailsController.contactForm.email.$error)}">
+    <label class="control-label" for="email">Epost</label>
+    <input type="email"
+           class="form-control"
+           id="email"
+           name="email"
+           required
+           ng-model="contactDetailsController.contact.email"
+           placeholder="Ange din e-post adress">
+    <span class="help-block"
+          ng-show="contactDetailsController.contactForm.email.$error.email">Felaktig epost-adress</span>
+    <span class="help-block"
+          ng-show="contactDetailsController.contactForm.email.$error.required">Du måste ange en e-post adress</span>
+    <span class="help-block"
+          ng-show="contactDetailsController.contactForm.email.$error.dumsnut">Dumsnut</span>
+  </div>
+
+  <button type="submit"
+          class="btn btn-primary"
+          ng-disabled="contactDetailsController.contactForm.$invalid"
+          ng-click="contactDetailsController.save()">Spara</button>
+  <button class="btn btn-default"
+          ng-click="contactDetailsController.cancel()">Tillbaka</button>
+
+</form>
+</section>

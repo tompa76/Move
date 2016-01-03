@@ -1,0 +1,19 @@
+<section id="contacts" class="container">
+
+
+
+  <table class="table table-striped">
+    <th>Förnamn</th>
+    <th>Efternamn</th>
+    <th>Telefon</th>
+    <th>Epost</th>
+
+    <tr ng-repeat="contact in contactsController.contacts">
+      <td><a ui-sref="root.contactDetails({contactId: contact.id})">{{contact.name}}</a></td>
+      <td><a ui-sref="root.contactDetails({contactId: contact.id})">{{contact.surname}}</a></td>
+      <td><a ng-href="tel:{{contact.tel_mobile}}">{{contact.tel_mobile}}</a></td>
+      <td><a ng-href="mailto:{{contact.mail}}">{{contact.mail}}</a></td>
+    </tr>
+  </table>
+
+</section>

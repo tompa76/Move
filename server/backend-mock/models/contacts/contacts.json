@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Adam",
+    "surname": "Reeves",
+    "tel_mobile": "555-123 34 45",
+    "mail": "adam.reeves@mail.com"
+  },
+  {
+    "id": 2,
+    "name": "Ben",
+    "surname": "Washington",
+    "tel_mobile": "555-345 56 76",
+    "mail": "ben.washington@mail.com"
+  },
+  {
+    "id": 3,
+    "name": "Danisa",
+    "surname": "Fox",
+    "tel_mobile": "555-123 56 67"
+  },
+  {
+    "id": 4,
+    "name": "Richard",
+    "surname": "Anderson"
+  }
+]
