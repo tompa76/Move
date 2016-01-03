@@ -18,6 +18,7 @@
     $translateProvider.useSanitizeValueStrategy('escaped');
     $translateProvider.preferredLanguage('sv_SE');
     $translateProvider.fallbackLanguage('sv_SE');
+    $translateProvider.useLocalStorage();
   }
 
 })();

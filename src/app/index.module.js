@@ -11,6 +11,7 @@
       'ui.router',
       'ui.bootstrap',
       'pascalprecht.translate',
+      'ngCookies',
       'toastr',
 
       //Models
